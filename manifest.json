@@ -1,0 +1,15 @@
+{
+  "name": "My Firs PWA",
+  "short_name": "PWA",
+  "display": "standalone",
+  "start_url": "/index.html",
+  "theme_color": "#ffffff",
+  "background_color": "#666",
+  "icons": [
+    {
+      "src": "assets/img/icon.png",
+      "sizes": "120×120",
+      "type": "image/png"
+    }
+  ]
+}

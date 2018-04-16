@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="telephone=no" name="format-detection" />
+  <meta content="email=no" name="format-detection" />
+  <title>Title</title>
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+<h4>hello PWA</h4>
+<p>aha?</p>
+<p>aha?</p>
+<p>aha?</p>
+<p>aha?</p>
+<a href="about.html">about.html</a>
+<script>
+  if(navigator.serviceWorker){
+    navigator.serviceWorker.register('sw.js').then(registration=>{
+      console.log('Registered enevt at scope:'+registration.scope);
+    }).catch(err=>{
+      console.log('serviceWorker Register error')
+    })
+  }
+</script>
+</body>
+</html>
