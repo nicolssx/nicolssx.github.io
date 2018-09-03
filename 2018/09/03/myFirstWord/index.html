@@ -92,7 +92,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="github," />
 
 
 
@@ -103,13 +103,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="github结合Hexo建立静态博客">
+<meta name="keywords" content="github">
+<meta property="og:type" content="article">
+<meta property="og:title" content="github建立博客">
+<meta property="og:url" content="http://yoursite.com/2018/09/03/myFirstWord/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="github结合Hexo建立静态博客">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-09-03T09:55:20.244Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="github建立博客">
+<meta name="twitter:description" content="github结合Hexo建立静态博客">
 
 
 
@@ -139,13 +144,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/03/myFirstWord/"/>
 
 
 
 
 
-  <title>Hexo</title>
+  <title>github建立博客 | Hexo</title>
   
 
 
@@ -164,8 +169,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -258,9 +262,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -290,9 +294,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/03/myFirstWord/" itemprop="url">github建立博客</a></h1>
+          <h1 class="post-title" itemprop="name headline">github建立博客</h1>
         
 
         <div class="post-meta">
@@ -361,6 +363,10 @@
           
 
           
+              <div class="post-description">
+                  github结合Hexo建立静态博客
+              </div>
+          
 
         </div>
       </header>
@@ -375,16 +381,42 @@
       
 
       
-        
-          github结合Hexo建立静态博客
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/09/03/myFirstWord/">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ol>
+<li>安装配置node、npm</li>
+<li>注册github账号下载github客户端、git工具 <a href="https://desktop.github.com/" target="_blank" rel="noopener">https://desktop.github.com/</a></li>
+<li>github上创建博客仓库</li>
+<li>打开github客户端下载代码</li>
+</ol>
+<h3 id="构建站点项目"><a href="#构建站点项目" class="headerlink" title="构建站点项目"></a>构建站点项目</h3><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><ol>
+<li>创建站点文件夹，进入站点文件夹，右键”git bash”</li>
+<li>安装hexo “npm install hexo-cli -g”</li>
+<li>初始化 “hexo init”</li>
+<li>安装依赖 “npm install”<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-node_module 插件目录</span><br><span class="line">-public 存放编译后的文件</span><br><span class="line">-scaffolds 模板文件</span><br><span class="line">-source 资源文件夹</span><br><span class="line">-themes 主题文件夹</span><br><span class="line">-_config.yml 站点配置文件</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><p>打开站点配置文件，参考官网配置 <a href="https://hexo.io/zh-cn/docs/configuration" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/configuration</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: Hexo //网站名称</span><br><span class="line">subtitle:</span><br><span class="line">description: //网站描述</span><br><span class="line">keywords:</span><br><span class="line">author: NicollSSX //作者</span><br><span class="line"># URL</span><br><span class="line">permalink: :year/:month/:day/:title/ //文章永久链接格式</span><br><span class="line"># Writing</span><br><span class="line">new_post_name: :year-:month-:day-:title.md //新文章的文件名称</span><br><span class="line">## Themes</span><br><span class="line">theme: landscape // 主题</span><br></pre></td></tr></table></figure></p>
+<h4 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h4><ul>
+<li>hexo g -编译</li>
+<li>hexo s -预览</li>
+<li>hexo c -清除缓存</li>
+</ul>
+<h3 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h3><p>示例：nexT主题</p>
+<ul>
+<li>下载主题包 <a href="https://github.com/iissnan/hexo-theme-next/releases" target="_blank" rel="noopener">https://github.com/iissnan/hexo-theme-next/releases</a></li>
+<li>解压压缩包重命名为next,拷贝至theme文件夹</li>
+<li>站点配置文件配置theme: next</li>
+<li>主题配置文件 _config.yml. <a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">http://theme-next.iissnan.com/getting-started.html</a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># 语言</span><br><span class="line">language: zh-Hans</span><br><span class="line"># 主题样式</span><br><span class="line">#scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">#scheme: Pisces</span><br><span class="line">scheme: Gemini</span><br><span class="line"># 作者</span><br><span class="line">author:</span><br><span class="line"># 签名</span><br><span class="line">description：</span><br><span class="line"># 侧栏</span><br><span class="line">sidebar:</span><br><span class="line">  position: left</span><br><span class="line"># 头像,图片路径(source/images)</span><br><span class="line">avatar: &apos;/images/avatar.jpg&apos;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h3><h4 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h4><p>hexo new [layout] &lt;title></p>
+<h4 id="layout"><a href="#layout" class="headerlink" title="layout"></a>layout</h4><ul>
+<li>post 默认布局</li>
+<li>page</li>
+<li>draft 草稿<br>新建文章布局会根据scaffolds文件夹下对应文件的内容建立文章</li>
+</ul>
+<h4 id="Front-Matter"><a href="#Front-Matter" class="headerlink" title="Front-Matter"></a>Front-Matter</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">title: // 文章标题</span><br><span class="line">date: // 创建时间</span><br><span class="line">layout: // false-不处理文章  </span><br><span class="line">categories: // 分类</span><br><span class="line">- test</span><br><span class="line">tags: // 标签</span><br><span class="line">- test</span><br><span class="line">description: // 描述</span><br></pre></td></tr></table></figure>
+<h4 id="草稿"><a href="#草稿" class="headerlink" title="草稿"></a>草稿</h4><p>将草稿移至_posts<br>hexo publish [layout] &lt;title></p>
+
       
     </div>
     
@@ -399,14 +431,20 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/github/" rel="tag"># github</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -416,10 +454,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -427,6 +466,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -447,8 +490,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -512,6 +564,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#准备工作"><span class="nav-number">1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构建站点项目"><span class="nav-number">2.</span> <span class="nav-text">构建站点项目</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-number">2.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置"><span class="nav-number">2.2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#部署"><span class="nav-number">2.3.</span> <span class="nav-text">部署</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主题"><span class="nav-number">3.</span> <span class="nav-text">主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#写作"><span class="nav-number">4.</span> <span class="nav-text">写作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#新建文章"><span class="nav-number">4.1.</span> <span class="nav-text">新建文章</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#layout"><span class="nav-number">4.2.</span> <span class="nav-text">layout</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Front-Matter"><span class="nav-number">4.3.</span> <span class="nav-text">Front-Matter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#草稿"><span class="nav-number">4.4.</span> <span class="nav-text">草稿</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -652,6 +720,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
